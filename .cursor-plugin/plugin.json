@@ -1,0 +1,12 @@
+{
+  "name": "kwilt",
+  "version": "0.1.0",
+  "description": "Connect Cursor to Kwilt context through MCP.",
+  "author": {
+    "name": "Kwilt"
+  },
+  "repository": "https://github.com/mtkinji/kwilt-cursor-plugin",
+  "homepage": "https://kwilt.app",
+  "keywords": ["kwilt", "mcp", "goals", "planning", "arcs"],
+  "logo": "assets/logo.svg"
+}

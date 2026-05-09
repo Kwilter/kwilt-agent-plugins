@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "kwilt": {
+      "url": "https://auth.kwilt.app/functions/v1/mcp"
+    }
+  }
+}
