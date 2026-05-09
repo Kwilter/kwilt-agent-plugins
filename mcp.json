@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "kwilt": {
+    "Kwilt": {
       "url": "https://auth.kwilt.app/functions/v1/mcp"
     }
   }
