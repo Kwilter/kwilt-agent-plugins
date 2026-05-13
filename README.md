@@ -33,7 +33,7 @@ Symlink this plugin into Cursor's local plugin directory:
 
 ```bash
 mkdir -p ~/.cursor/plugins/local
-ln -s /path/to/kwilt-cursor-plugin ~/.cursor/plugins/local/kwilt
+ln -s /path/to/kwilt-agent-plugins ~/.cursor/plugins/local/kwilt
 ```
 
 Then restart Cursor or run **Developer: Reload Window**.
@@ -46,7 +46,7 @@ Symlink this plugin into Claude's local plugin directory:
 
 ```bash
 mkdir -p ~/.claude/plugins/local
-ln -s /path/to/kwilt-cursor-plugin ~/.claude/plugins/local/kwilt
+ln -s /path/to/kwilt-agent-plugins ~/.claude/plugins/local/kwilt
 ```
 
 Then restart Claude Code.
@@ -59,7 +59,7 @@ Symlink this plugin into Codex's local plugin directory:
 
 ```bash
 mkdir -p ~/plugins
-ln -s /path/to/kwilt-cursor-plugin ~/plugins/kwilt
+ln -s /path/to/kwilt-agent-plugins ~/plugins/kwilt
 ```
 
 If you use a local Codex marketplace file, add the plugin entry from `docs/codex-marketplace-example.json`.

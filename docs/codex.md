@@ -15,7 +15,7 @@ It reuses the shared Kwilt skill and shared MCP config:
 
 ```bash
 mkdir -p ~/plugins
-ln -s /path/to/kwilt-cursor-plugin ~/plugins/kwilt
+ln -s /path/to/kwilt-agent-plugins ~/plugins/kwilt
 ```
 
 If your Codex setup uses a local marketplace index, adapt the sample in:

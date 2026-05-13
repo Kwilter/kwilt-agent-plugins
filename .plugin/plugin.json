@@ -7,7 +7,7 @@
     "url": "https://kwilt.app"
   },
   "homepage": "https://kwilt.app",
-  "repository": "https://github.com/Kwilter/kwilt-cursor-plugin",
+  "repository": "https://github.com/Kwilter/kwilt-agent-plugins",
   "license": "UNLICENSED",
   "keywords": [
     "kwilt",

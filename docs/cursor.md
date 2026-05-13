@@ -16,7 +16,7 @@ The manifest points at:
 
 ```bash
 mkdir -p ~/.cursor/plugins/local
-ln -s /path/to/kwilt-cursor-plugin ~/.cursor/plugins/local/kwilt
+ln -s /path/to/kwilt-agent-plugins ~/.cursor/plugins/local/kwilt
 ```
 
 Restart Cursor or run **Developer: Reload Window**.

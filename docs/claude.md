@@ -15,7 +15,7 @@ It reuses the shared Kwilt skill and shared MCP config:
 
 ```bash
 mkdir -p ~/.claude/plugins/local
-ln -s /path/to/kwilt-cursor-plugin ~/.claude/plugins/local/kwilt
+ln -s /path/to/kwilt-agent-plugins ~/.claude/plugins/local/kwilt
 ```
 
 Restart Claude Code after installing.
