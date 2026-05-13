@@ -6,11 +6,17 @@
     "name": "Kwilt",
     "url": "https://kwilt.app"
   },
-  "repository": "https://github.com/Kwilter/kwilt-cursor-plugin",
   "homepage": "https://kwilt.app",
+  "repository": "https://github.com/Kwilter/kwilt-cursor-plugin",
   "license": "UNLICENSED",
-  "skills": "skills",
-  "mcpServers": "mcp.json",
-  "keywords": ["kwilt", "mcp", "goals", "planning", "arcs", "life-planning"],
-  "logo": "assets/logo.svg"
+  "keywords": [
+    "kwilt",
+    "mcp",
+    "goals",
+    "planning",
+    "arcs",
+    "life-planning"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
 }

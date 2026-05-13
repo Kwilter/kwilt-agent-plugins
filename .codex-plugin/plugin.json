@@ -1,0 +1,43 @@
+{
+  "name": "kwilt",
+  "version": "0.2.0",
+  "description": "Connect Codex to Kwilt context through MCP.",
+  "author": {
+    "name": "Kwilt",
+    "url": "https://kwilt.app"
+  },
+  "homepage": "https://kwilt.app",
+  "repository": "https://github.com/Kwilter/kwilt-cursor-plugin",
+  "license": "UNLICENSED",
+  "keywords": [
+    "kwilt",
+    "mcp",
+    "goals",
+    "planning",
+    "arcs",
+    "life-planning"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Kwilt",
+    "shortDescription": "Use your Kwilt context from Codex.",
+    "longDescription": "Connect Codex to Kwilt through MCP so the agent can read your Arcs, Goals, recent Activities, Chapter context, and show-up status when you ask for Kwilt-aware help.",
+    "developerName": "Kwilt",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read"
+    ],
+    "websiteURL": "https://kwilt.app",
+    "privacyPolicyURL": "https://kwilt.app/privacy",
+    "termsOfServiceURL": "https://kwilt.app/terms",
+    "defaultPrompt": [
+      "What Kwilt arcs can you see?",
+      "Summarize my current Kwilt goals.",
+      "What does my recent Kwilt activity suggest?"
+    ],
+    "brandColor": "#315B49",
+    "logo": "./assets/logo.svg"
+  }
+}
