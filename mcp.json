@@ -2,7 +2,8 @@
   "mcpServers": {
     "Kwilt": {
       "type": "http",
-      "url": "https://auth.kwilt.app/functions/v1/mcp"
+      "url": "https://auth.kwilt.app/functions/v1/mcp",
+      "note": "Kwilt MCP server for context plus Goal and Activity control-plane writes when OAuth write scope is granted."
     }
   }
 }

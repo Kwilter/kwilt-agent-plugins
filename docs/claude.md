@@ -9,6 +9,7 @@ The Claude Code-specific manifest is:
 It reuses the shared Kwilt skill and shared MCP config:
 
 - `skills/kwilt/SKILL.md`
+- `skills/kwilt-control-plane/SKILL.md`
 - `.mcp.json`
 
 ## Local Install
@@ -22,8 +23,14 @@ Restart Claude Code after installing.
 
 ## Authentication
 
-Enable the `Kwilt` MCP server in Claude Code and complete the hosted OAuth consent flow. Sprint A access is read-only and limited to summarized Kwilt context.
+Enable the `Kwilt` MCP server in Claude Code and complete the hosted OAuth consent flow. Sprint B access reads summarized Kwilt context and, when write scope is granted, lets Claude Code create or update Goals and Activities for durable build to-dos.
+
+## Control-Plane Behavior
+
+Use `skills/kwilt-control-plane/SKILL.md` when Claude Code is doing feature work, preserving deferred follow-up, or keeping implementation to-dos aligned with Kwilt Goals. Claude should summarize any Kwilt writes before handing work back.
 
 ## Notes
 
 Keep this manifest in the same repository as the Cursor and Codex manifests so shared skills, MCP config, privacy copy, and revocation guidance stay consistent across platforms.
+
+For public Claude distribution, use the remote MCP connector route documented in `docs/claude-remote-connector.md`. That path is a better fit for Kwilt's hosted OAuth MCP server than treating this repository as only a local Claude Code plugin.

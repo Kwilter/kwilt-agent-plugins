@@ -29,6 +29,8 @@ Prefer this read order:
 
 ## Safety
 
-Sprint A Kwilt MCP tools are read-only. Do not claim you can create, edit, or delete Kwilt data through the connector.
+This skill is read-first and context-focused. Use `kwilt-control-plane` for durable Goal and To-do writes during agent build work.
+
+Do not create, edit, or delete Kwilt data as part of a context-summary answer unless the user explicitly asks for a write and the current client exposes the relevant Kwilt MCP write tools.
 
 Do not reveal raw IDs unless the user asks for debugging details. Prefer names, summaries, dates, and relationships that help the user reason about their goals.
