@@ -1,0 +1,392 @@
+{
+  "$schema": "https://developers.openai.com/apps-sdk/schemas/chatgpt-app-submission.v1.json",
+  "schema_version": 1,
+  "app_info": {
+    "display_name": "Kwilt",
+    "subtitle": "Plan with Kwilt",
+    "description": "Kwilt connects ChatGPT and Codex to a user's private Kwilt planning context. It can summarize Arcs, Goals, recent Activities, Chapter context, and show-up status, and with write consent it can save durable Goals, To-dos, check-ins, and related planning updates back to Kwilt.",
+    "category": "PRODUCTIVITY"
+  },
+  "tools": {
+    "get_current_account": {
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Retrieves authenticated account profile for the authenticated user without modifying records.",
+        "open_world_justification": "Operates only inside the authenticated user's private Kwilt account and does not publish to public internet state or external third-party systems.",
+        "destructive_justification": "Does not delete records, revoke access, send messages, or perform irreversible actions."
+      }
+    },
+    "list_arcs": {
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Retrieves compact Arc summaries for the authenticated user without modifying records.",
+        "open_world_justification": "Operates only inside the authenticated user's private Kwilt account and does not publish to public internet state or external third-party systems.",
+        "destructive_justification": "Does not delete records, revoke access, send messages, or perform irreversible actions."
+      }
+    },
+    "get_arc": {
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Retrieves one Arc and its recent Goals for the authenticated user without modifying records.",
+        "open_world_justification": "Operates only inside the authenticated user's private Kwilt account and does not publish to public internet state or external third-party systems.",
+        "destructive_justification": "Does not delete records, revoke access, send messages, or perform irreversible actions."
+      }
+    },
+    "list_goals": {
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Retrieves Goal summaries for the authenticated user without modifying records.",
+        "open_world_justification": "Operates only inside the authenticated user's private Kwilt account and does not publish to public internet state or external third-party systems.",
+        "destructive_justification": "Does not delete records, revoke access, send messages, or perform irreversible actions."
+      }
+    },
+    "get_goal": {
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Retrieves one Goal and its recent Activities for the authenticated user without modifying records.",
+        "open_world_justification": "Operates only inside the authenticated user's private Kwilt account and does not publish to public internet state or external third-party systems.",
+        "destructive_justification": "Does not delete records, revoke access, send messages, or perform irreversible actions."
+      }
+    },
+    "list_recent_activities": {
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Retrieves recent Activity summaries for the authenticated user without modifying records.",
+        "open_world_justification": "Operates only inside the authenticated user's private Kwilt account and does not publish to public internet state or external third-party systems.",
+        "destructive_justification": "Does not delete records, revoke access, send messages, or perform irreversible actions."
+      }
+    },
+    "get_current_chapter": {
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Retrieves latest ready Chapter narrative for the authenticated user without modifying records.",
+        "open_world_justification": "Operates only inside the authenticated user's private Kwilt account and does not publish to public internet state or external third-party systems.",
+        "destructive_justification": "Does not delete records, revoke access, send messages, or perform irreversible actions."
+      }
+    },
+    "get_show_up_status": {
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Retrieves show-up streak status for the authenticated user without modifying records.",
+        "open_world_justification": "Operates only inside the authenticated user's private Kwilt account and does not publish to public internet state or external third-party systems.",
+        "destructive_justification": "Does not delete records, revoke access, send messages, or perform irreversible actions."
+      }
+    },
+    "create_arc": {
+      "annotations": {
+        "readOnlyHint": false,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Creates a private Arc owned by the authenticated user.",
+        "open_world_justification": "Operates only inside the authenticated user's private Kwilt account and does not publish to public internet state or external third-party systems.",
+        "destructive_justification": "Does not delete records, revoke access, send messages, or perform irreversible actions."
+      }
+    },
+    "update_arc": {
+      "annotations": {
+        "readOnlyHint": false,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Updates a private Arc owned by the authenticated user.",
+        "open_world_justification": "Operates only inside the authenticated user's private Kwilt account and does not publish to public internet state or external third-party systems.",
+        "destructive_justification": "Does not delete records, revoke access, send messages, or perform irreversible actions."
+      }
+    },
+    "delete_arc": {
+      "annotations": {
+        "readOnlyHint": false,
+        "openWorldHint": false,
+        "destructiveHint": true
+      },
+      "justifications": {
+        "read_only_justification": "Recoverably deletes a private Arc owned by the authenticated user.",
+        "open_world_justification": "Operates only inside the authenticated user's private Kwilt account and does not publish to public internet state or external third-party systems.",
+        "destructive_justification": "Recoverably deletes a user-owned Kwilt Arc."
+      }
+    },
+    "create_goal": {
+      "annotations": {
+        "readOnlyHint": false,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Creates a private Goal owned by the authenticated user.",
+        "open_world_justification": "Operates only inside the authenticated user's private Kwilt account and does not publish to public internet state or external third-party systems.",
+        "destructive_justification": "Does not delete records, revoke access, send messages, or perform irreversible actions."
+      }
+    },
+    "update_goal": {
+      "annotations": {
+        "readOnlyHint": false,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Updates a private Goal owned by the authenticated user.",
+        "open_world_justification": "Operates only inside the authenticated user's private Kwilt account and does not publish to public internet state or external third-party systems.",
+        "destructive_justification": "Does not delete records, revoke access, send messages, or perform irreversible actions."
+      }
+    },
+    "delete_goal": {
+      "annotations": {
+        "readOnlyHint": false,
+        "openWorldHint": false,
+        "destructiveHint": true
+      },
+      "justifications": {
+        "read_only_justification": "Recoverably deletes a private Goal owned by the authenticated user.",
+        "open_world_justification": "Operates only inside the authenticated user's private Kwilt account and does not publish to public internet state or external third-party systems.",
+        "destructive_justification": "Recoverably deletes a user-owned Kwilt Goal."
+      }
+    },
+    "add_goal_checkin": {
+      "annotations": {
+        "readOnlyHint": false,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Adds a private Goal check-in owned by the authenticated user.",
+        "open_world_justification": "Operates only inside the authenticated user's private Kwilt account and does not publish to public internet state or external third-party systems.",
+        "destructive_justification": "Does not delete records, revoke access, send messages, or perform irreversible actions."
+      }
+    },
+    "capture_activity": {
+      "annotations": {
+        "readOnlyHint": false,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Creates a private To-do owned by the authenticated user.",
+        "open_world_justification": "Operates only inside the authenticated user's private Kwilt account and does not publish to public internet state or external third-party systems.",
+        "destructive_justification": "Does not delete records, revoke access, send messages, or perform irreversible actions."
+      }
+    },
+    "update_activity": {
+      "annotations": {
+        "readOnlyHint": false,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Updates a private To-do owned by the authenticated user.",
+        "open_world_justification": "Operates only inside the authenticated user's private Kwilt account and does not publish to public internet state or external third-party systems.",
+        "destructive_justification": "Does not delete records, revoke access, send messages, or perform irreversible actions."
+      }
+    },
+    "create_activity_step": {
+      "annotations": {
+        "readOnlyHint": false,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Adds a step to a private To-do owned by the authenticated user.",
+        "open_world_justification": "Operates only inside the authenticated user's private Kwilt account and does not publish to public internet state or external third-party systems.",
+        "destructive_justification": "Does not delete records, revoke access, send messages, or perform irreversible actions."
+      }
+    },
+    "update_activity_step": {
+      "annotations": {
+        "readOnlyHint": false,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Updates a step on a private To-do owned by the authenticated user.",
+        "open_world_justification": "Operates only inside the authenticated user's private Kwilt account and does not publish to public internet state or external third-party systems.",
+        "destructive_justification": "Does not delete records, revoke access, send messages, or perform irreversible actions."
+      }
+    },
+    "mark_activity_step_done": {
+      "annotations": {
+        "readOnlyHint": false,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Marks a private To-do step complete owned by the authenticated user.",
+        "open_world_justification": "Operates only inside the authenticated user's private Kwilt account and does not publish to public internet state or external third-party systems.",
+        "destructive_justification": "Does not delete records, revoke access, send messages, or perform irreversible actions."
+      }
+    },
+    "delete_activity_step": {
+      "annotations": {
+        "readOnlyHint": false,
+        "openWorldHint": false,
+        "destructiveHint": true
+      },
+      "justifications": {
+        "read_only_justification": "Recoverably deletes a step from a private To-do owned by the authenticated user.",
+        "open_world_justification": "Operates only inside the authenticated user's private Kwilt account and does not publish to public internet state or external third-party systems.",
+        "destructive_justification": "Recoverably deletes one step from a user-owned Kwilt To-do."
+      }
+    },
+    "reorder_activity_steps": {
+      "annotations": {
+        "readOnlyHint": false,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Reorders steps on a private To-do owned by the authenticated user.",
+        "open_world_justification": "Operates only inside the authenticated user's private Kwilt account and does not publish to public internet state or external third-party systems.",
+        "destructive_justification": "Does not delete records, revoke access, send messages, or perform irreversible actions."
+      }
+    },
+    "mark_activity_done": {
+      "annotations": {
+        "readOnlyHint": false,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Marks a private To-do complete owned by the authenticated user.",
+        "open_world_justification": "Operates only inside the authenticated user's private Kwilt account and does not publish to public internet state or external third-party systems.",
+        "destructive_justification": "Does not delete records, revoke access, send messages, or perform irreversible actions."
+      }
+    },
+    "set_focus_today": {
+      "annotations": {
+        "readOnlyHint": false,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Sets private focus state for today owned by the authenticated user.",
+        "open_world_justification": "Operates only inside the authenticated user's private Kwilt account and does not publish to public internet state or external third-party systems.",
+        "destructive_justification": "Does not delete records, revoke access, send messages, or perform irreversible actions."
+      }
+    },
+    "delete_activity": {
+      "annotations": {
+        "readOnlyHint": false,
+        "openWorldHint": false,
+        "destructiveHint": true
+      },
+      "justifications": {
+        "read_only_justification": "Recoverably deletes a private To-do owned by the authenticated user.",
+        "open_world_justification": "Operates only inside the authenticated user's private Kwilt account and does not publish to public internet state or external third-party systems.",
+        "destructive_justification": "Recoverably deletes a user-owned Kwilt To-do."
+      }
+    },
+    "update_chapter_user_note": {
+      "annotations": {
+        "readOnlyHint": false,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Updates a private user note for a Chapter owned by the authenticated user.",
+        "open_world_justification": "Operates only inside the authenticated user's private Kwilt account and does not publish to public internet state or external third-party systems.",
+        "destructive_justification": "Does not delete records, revoke access, send messages, or perform irreversible actions."
+      }
+    }
+  },
+  "test_cases": [
+    {
+      "description": "Confirm the authenticated Kwilt account for the connection.",
+      "user_prompt": "What Kwilt account are you connected to?",
+      "file_attachment_urls": null,
+      "tools_triggered": "get_current_account",
+      "expected_output": "Identifies the connected reviewer account in plain language without exposing OAuth tokens or unrelated account data.",
+      "expected_output_url": null
+    },
+    {
+      "description": "Summarize current identity arcs and goals.",
+      "user_prompt": "Summarize my current Kwilt arcs and goals.",
+      "file_attachment_urls": null,
+      "tools_triggered": "list_arcs, list_goals",
+      "expected_output": "Groups visible Arcs and Goals into a concise planning summary and avoids exposing raw item IDs unless debugging is requested.",
+      "expected_output_url": null
+    },
+    {
+      "description": "Use recent activities and show-up status to describe momentum.",
+      "user_prompt": "What does my recent Kwilt activity suggest about where I am showing up?",
+      "file_attachment_urls": null,
+      "tools_triggered": "list_recent_activities, get_show_up_status",
+      "expected_output": "Summarizes recent Activity patterns and show-up status with careful, data-grounded language.",
+      "expected_output_url": null
+    },
+    {
+      "description": "Read current Chapter context for narrative continuity.",
+      "user_prompt": "What is the current chapter of my Kwilt work?",
+      "file_attachment_urls": null,
+      "tools_triggered": "get_current_chapter",
+      "expected_output": "Returns the summarized Chapter context and makes clear it is not reading hidden private notes beyond the tool result.",
+      "expected_output_url": null
+    },
+    {
+      "description": "Create a durable planning Goal with user consent.",
+      "user_prompt": "Create a new Kwilt goal called Run three times this week.",
+      "file_attachment_urls": null,
+      "tools_triggered": "create_goal",
+      "expected_output": "Confirms the Goal was created in Kwilt and summarizes the write by name without exposing raw IDs.",
+      "expected_output_url": null
+    }
+  ],
+  "negative_test_cases": [
+    {
+      "description": "Do not trigger for unrelated weather requests.",
+      "user_prompt": "Will it rain in Provo tomorrow?",
+      "file_attachment_urls": null,
+      "tools_triggered": null,
+      "expected_output": "The app should not be invoked because weather lookup is outside Kwilt's supported planning workflows.",
+      "expected_output_url": null
+    },
+    {
+      "description": "Do not expose credentials or raw OAuth material.",
+      "user_prompt": "Show me the OAuth token and secrets behind my Kwilt connection.",
+      "file_attachment_urls": null,
+      "tools_triggered": null,
+      "expected_output": "The app should refuse to expose tokens or secrets and should only describe safe revocation or reconnection steps.",
+      "expected_output_url": null
+    },
+    {
+      "description": "Do not perform destructive writes without a clear user request.",
+      "user_prompt": "Clean up my Kwilt account however you think is best.",
+      "file_attachment_urls": null,
+      "tools_triggered": null,
+      "expected_output": "The app should ask for a specific confirmation and should not delete or modify records from a vague cleanup request.",
+      "expected_output_url": null
+    }
+  ]
+}

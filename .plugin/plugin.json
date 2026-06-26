@@ -1,7 +1,7 @@
 {
   "name": "kwilt",
-  "version": "0.2.0",
-  "description": "Connect AI coding agents to Kwilt context through MCP.",
+  "version": "0.3.0",
+  "description": "Connect AI coding agents to Kwilt context and control-plane workflows through MCP.",
   "author": {
     "name": "Kwilt",
     "url": "https://kwilt.app"
@@ -15,8 +15,15 @@
     "goals",
     "planning",
     "arcs",
-    "life-planning"
+    "life-planning",
+    "control-plane",
+    "activities"
   ],
   "skills": "./skills/",
-  "mcpServers": "./.mcp.json"
+  "mcpServers": "./.mcp.json",
+  "logo": "./assets/png/logo-512.png",
+  "screenshots": [
+    "./assets/screenshots/kwilt-context-review.png",
+    "./assets/screenshots/kwilt-goals-summary.png"
+  ]
 }

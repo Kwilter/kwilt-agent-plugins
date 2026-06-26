@@ -1,7 +1,7 @@
 {
   "name": "kwilt",
-  "version": "0.2.0",
-  "description": "Connect Codex to Kwilt context through MCP.",
+  "version": "0.3.0",
+  "description": "Connect Codex to Kwilt context and control-plane workflows through MCP.",
   "author": {
     "name": "Kwilt",
     "url": "https://kwilt.app"
@@ -15,29 +15,38 @@
     "goals",
     "planning",
     "arcs",
-    "life-planning"
+    "life-planning",
+    "control-plane",
+    "activities"
   ],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Kwilt",
-    "shortDescription": "Use your Kwilt context from Codex.",
-    "longDescription": "Connect Codex to Kwilt through MCP so the agent can read your Arcs, Goals, recent Activities, Chapter context, and show-up status when you ask for Kwilt-aware help.",
+    "shortDescription": "Use Kwilt context and to-dos from Codex.",
+    "longDescription": "Connect Codex to Kwilt through MCP so the agent can inspect the authenticated account, read Arcs, Goals, recent Activities, Chapter context, and show-up status, then capture durable Goals and To-dos when you ask Codex to build, plan, or preserve follow-up work.",
     "developerName": "Kwilt",
     "category": "Productivity",
     "capabilities": [
       "Interactive",
-      "Read"
+      "Read",
+      "Write"
     ],
     "websiteURL": "https://kwilt.app",
     "privacyPolicyURL": "https://kwilt.app/privacy",
     "termsOfServiceURL": "https://kwilt.app/terms",
     "defaultPrompt": [
-      "What Kwilt arcs can you see?",
+      "What Kwilt account are you connected to?",
       "Summarize my current Kwilt goals.",
-      "What does my recent Kwilt activity suggest?"
+      "What does my recent Kwilt activity suggest?",
+      "Use Kwilt to keep track of the durable to-dos for this build."
     ],
     "brandColor": "#315B49",
-    "logo": "./assets/logo.svg"
+    "composerIcon": "./assets/png/icon-128.png",
+    "logo": "./assets/png/logo-512.png",
+    "screenshots": [
+      "./assets/screenshots/kwilt-context-review.png",
+      "./assets/screenshots/kwilt-goals-summary.png"
+    ]
   }
 }
