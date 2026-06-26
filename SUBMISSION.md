@@ -127,6 +127,7 @@ Use these files for review and submission:
 
 - `docs/reviewer-test-plan.md`: Prompts, expected behavior, and rejection-risk checks.
 - `chatgpt-app-submission.json`: OpenAI Apps submission import data with app info, tool hint justifications, and test cases.
+- `docs/openai-demo-recording.md`: Demo recording runbook for the required OpenAI Platform recording URL.
 - `docs/demo-account-plan.md`: Demo OAuth account and seeded data requirements.
 - `docs/privacy.md`: Privacy and data exposure notes.
 - `docs/revocation.md`: User revocation notes.
@@ -145,6 +146,7 @@ Complete this checklist before sending any public submission:
 - [ ] OAuth succeeds from a clean reviewer account with no MFA or extra verification step.
 - [ ] Demo account contains stable seeded data.
 - [ ] All test prompts pass on the target client.
+- [ ] OpenAI demo recording URL shows the real Developer Mode connector flow with the demo account.
 - [ ] One controlled Goal and Activity write has been created and verified in Kwilt.
 - [ ] Tool metadata and annotations match actual behavior.
 - [ ] User-facing answers omit raw item IDs unless needed for connector debugging.
