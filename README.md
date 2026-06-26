@@ -8,7 +8,7 @@ This repository intentionally contains all Kwilt agent plugin artifacts in one p
 
 - A shared remote MCP server config for `https://auth.kwilt.app/functions/v1/mcp`
 - Plugin manifests for Claude Code, Cursor, and Codex
-- A Kwilt context skill that teaches agents how to use Arcs, Goals, Activities, Chapters, and show-up status as personal context
+- A Kwilt context skill that teaches agents how to use account, Arc, Goal, Activity, Chapter, and show-up context
 - A Kwilt control-plane skill that teaches agents to capture durable build Goals and To-dos during coding work
 - Sprint B access to read Kwilt context and, with OAuth write consent, create or update Goals and Activities
 - A submission packet for ChatGPT/OpenAI, Codex, Claude, and Cursor review
@@ -93,7 +93,7 @@ The Kwilt MCP server must allow each client callback before the OAuth flow can c
 Ask your agent:
 
 ```text
-What Kwilt arcs can you see?
+What Kwilt account are you connected to?
 ```
 
 Then try:
@@ -112,6 +112,7 @@ Use Kwilt to keep track of the durable to-dos for this build.
 
 Sprint B can read limited Kwilt summaries for:
 
+- Authenticated account identity
 - Arcs
 - Goals
 - Recent Activities

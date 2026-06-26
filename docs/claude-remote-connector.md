@@ -18,7 +18,7 @@ This repo targets Claude's remote MCP connector path for public Claude distribut
 Short description:
 
 ```text
-Connect Claude to your Kwilt Arcs, Goals, recent Activities, Chapter context, and show-up status.
+Connect Claude to your Kwilt account, Arcs, Goals, recent Activities, Chapter context, and show-up status.
 ```
 
 Long description:

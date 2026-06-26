@@ -9,6 +9,8 @@ The demo account should include:
 - At least three Arcs, including one active identity arc.
 - At least four Goals across two or more Arcs.
 - At least five recent Activities with dates in the last 14 days.
+- One dedicated reviewer/demo account with no personal production data.
+- One known Goal that reviewers can inspect in detail.
 - One current or latest Chapter summary.
 - One show-up or streak summary.
 
@@ -16,25 +18,25 @@ The connector can read summarized Kwilt context. With OAuth write scope, it can 
 
 ## Test Cases
 
-### 1. Arc Overview
+### 1. Account Connection
 
 Prompt:
 
 ```text
-What Kwilt arcs can you see?
+What Kwilt account are you connected to?
 ```
 
 Expected behavior:
 
 - The agent calls the Kwilt MCP tools before answering.
-- The answer names the visible Arcs in plain language.
-- The answer does not expose raw database IDs.
-- The answer makes clear that it is summarizing available Kwilt context.
+- The answer identifies the connected reviewer/demo account in plain language.
+- The answer does not expose raw OAuth tokens, session IDs, or unrelated account data.
+- The answer makes clear that it is using the authenticated Kwilt MCP connection.
 
 Expected output shape:
 
 ```text
-I can see several Kwilt arcs, including [arc names]. The strongest current theme appears to be [brief pattern], based on the summaries available through Kwilt.
+Kwilt is connected to [demo account email]. I can use this connection to read the Kwilt context exposed through the MCP server.
 ```
 
 ### 2. Goal Summary

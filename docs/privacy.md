@@ -6,13 +6,14 @@ The Kwilt plugin connects an AI agent to the Kwilt MCP server only after the use
 
 Sprint B access can read summarized Kwilt context:
 
+- Authenticated account identity
 - Arcs
 - Goals
 - Recent Activities
 - Current or latest Chapter context
 - Show-up or streak status
 
-When the user grants OAuth write scope, the agent can also create or update user-owned Goals and Activities. The intended write use is durable planning capture: build to-dos, deferred follow-ups, and implementation outcomes that should persist in Kwilt.
+When the user grants OAuth write scope, the agent can also create, update, or recoverably delete user-owned Arcs, Goals, Activities, Activity steps, Goal check-ins, focus state, and Chapter user notes. The intended write use is durable planning capture: build to-dos, deferred follow-ups, and implementation outcomes that should persist in Kwilt.
 
 The plugin should not expose raw database records, hidden notes, credentials, or unrelated account data.
 

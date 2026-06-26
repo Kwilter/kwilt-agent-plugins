@@ -6,7 +6,7 @@ This repo packages the Kwilt remote MCP connector for agent clients. The core ar
 https://auth.kwilt.app/functions/v1/mcp
 ```
 
-Sprint B exposes summarized Kwilt context for Arcs, Goals, recent Activities, Chapter context, and show-up status. With OAuth write scope, the connector can also create or update user-owned Goals and Activities so coding agents can preserve durable build to-dos and deferred follow-ups in Kwilt.
+Sprint B exposes summarized Kwilt context for account inspection, Arcs, Goals, recent Activities, Chapter context, and show-up status. With OAuth write scope, the connector can also create, update, or recoverably delete user-owned Arcs, Goals, Activities, Activity steps, Goal check-ins, focus state, and Chapter user notes so agents can preserve durable build to-dos and deferred follow-ups in Kwilt.
 
 ## Submission Tracks
 
@@ -17,6 +17,7 @@ OpenAI's public submission path is an Apps SDK app submitted through the OpenAI 
 Current repo status:
 
 - MCP server URL is present in `.mcp.json`.
+- Submission import data is present in `chatgpt-app-submission.json`.
 - Privacy and revocation notes are present in `docs/privacy.md` and `docs/revocation.md`.
 - PNG logo and screenshot assets are present in `assets/png/` and `assets/screenshots/`.
 - Reviewer prompts and expected outputs are present in `docs/reviewer-test-plan.md`.
@@ -58,8 +59,8 @@ Before submitting publicly:
 
 - Test the plugin locally through a Codex local marketplace.
 - Confirm OAuth works from a clean Codex install.
-- Confirm every Kwilt MCP tool response matches the granted scope and does not leak raw IDs, tokens, hidden notes, or unrelated account data.
-- Confirm write tools create or update only user-owned Goals and Activities, and that agents summarize those writes before handoff.
+- Confirm every Kwilt MCP tool response matches the granted scope and does not leak tokens, hidden notes, or unrelated account data; agents should not reveal raw item IDs in user-facing answers unless the user is debugging the connector.
+- Confirm write tools create, update, or recoverably delete only user-owned Kwilt planning records, and that agents summarize those writes before handoff.
 - Keep release notes for any update after approval.
 
 Useful official docs:
@@ -125,6 +126,7 @@ Useful official docs:
 Use these files for review and submission:
 
 - `docs/reviewer-test-plan.md`: Prompts, expected behavior, and rejection-risk checks.
+- `chatgpt-app-submission.json`: OpenAI Apps submission import data with app info, tool hint justifications, and test cases.
 - `docs/demo-account-plan.md`: Demo OAuth account and seeded data requirements.
 - `docs/privacy.md`: Privacy and data exposure notes.
 - `docs/revocation.md`: User revocation notes.
@@ -145,7 +147,7 @@ Complete this checklist before sending any public submission:
 - [ ] All test prompts pass on the target client.
 - [ ] One controlled Goal and Activity write has been created and verified in Kwilt.
 - [ ] Tool metadata and annotations match actual behavior.
-- [ ] Tool responses omit raw IDs unless needed for debugging.
+- [ ] User-facing answers omit raw item IDs unless needed for connector debugging.
 - [ ] Privacy policy discloses every user-related field returned by tools.
 - [ ] Revocation instructions are accurate for both client-side disconnect and server-side OAuth revocation.
 - [ ] PNG assets are uploaded instead of relying only on SVG.

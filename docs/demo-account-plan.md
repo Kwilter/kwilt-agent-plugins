@@ -16,6 +16,8 @@ Create stable, non-sensitive data that exercises every context tool and leaves r
 
 Suggested fixture:
 
+- Account identity:
+  - A dedicated reviewer/demo account with a non-personal email address.
 - Arc: `Creative Practice`
   - Goal: `Publish one short reflection each week`
   - Goal: `Collect three examples of work that feels alive`

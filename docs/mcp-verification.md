@@ -79,7 +79,7 @@ Expected result:
 - OAuth completes without MFA or internal network access.
 - The server lists context tools and the expected Goal/Activity write tools for the granted scope.
 - Tool calls return summarized Kwilt context.
-- Write tools create or update only user-owned Goals and Activities.
+- Write tools create, update, or recoverably delete only user-owned Kwilt planning records.
 - Tool results do not include tokens, secrets, unrelated account data, or unexpected raw records.
 
 Non-interactive clean-shell check:
@@ -107,6 +107,14 @@ Before final public submission, capture:
 - One successful result for each reviewer test prompt.
 - One successful controlled Goal and Activity write result, including the visible Goal and Activity names.
 - Any known platform-specific callback URL.
+
+Observed on 2026-06-26 from Codex against the hosted endpoint with an authenticated Kwilt MCP token:
+
+- `initialize` returned server `Kwilt` version `0.1.0`.
+- `tools/list` returned 26 tools.
+- First read tools returned by the hosted server: `get_current_account`, `list_arcs`, `get_arc`, `list_goals`, `get_goal`, `list_recent_activities`, `get_current_chapter`, `get_show_up_status`.
+- Every listed tool included explicit `readOnlyHint`, `openWorldHint`, and `destructiveHint` annotations.
+- No listed tool declared an `outputSchema`; add output schemas in a future MCP hardening pass so models can use structured results more reliably.
 
 ## Sprint B Write Smoke
 

@@ -3,20 +3,20 @@
   <rect x="96" y="88" width="1408" height="824" rx="32" fill="#FFFFFF" stroke="#D9D4C8" stroke-width="2"/>
   <rect x="96" y="88" width="1408" height="112" rx="32" fill="#315B49"/>
   <text x="152" y="158" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="700" fill="#F8F6EF">Kwilt</text>
-  <text x="308" y="158" font-family="Inter, Arial, sans-serif" font-size="28" fill="#E9E4D4">Read-only personal context for agents</text>
+  <text x="308" y="158" font-family="Inter, Arial, sans-serif" font-size="28" fill="#E9E4D4">Personal context and planning control for agents</text>
   <circle cx="1420" cy="144" r="28" fill="#D7C890"/>
   <path d="M1406 144h28M1420 130v28" stroke="#315B49" stroke-width="5" stroke-linecap="round"/>
-  <text x="152" y="284" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#243A31">What Kwilt arcs can you see?</text>
+  <text x="152" y="284" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#243A31">What Kwilt account are you connected to?</text>
   <rect x="152" y="332" width="1296" height="1" fill="#E4DED0"/>
-  <text x="152" y="404" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#315B49">Visible Arcs</text>
-  <text x="152" y="462" font-family="Inter, Arial, sans-serif" font-size="28" fill="#2E2D29">Creative Practice</text>
-  <text x="152" y="516" font-family="Inter, Arial, sans-serif" font-size="28" fill="#2E2D29">Steady Body</text>
-  <text x="152" y="570" font-family="Inter, Arial, sans-serif" font-size="28" fill="#2E2D29">Deep Work</text>
+  <text x="152" y="404" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#315B49">Connected account</text>
+  <text x="152" y="462" font-family="Inter, Arial, sans-serif" font-size="28" fill="#2E2D29">reviewer@kwilt.app</text>
+  <text x="152" y="516" font-family="Inter, Arial, sans-serif" font-size="28" fill="#2E2D29">Arcs, Goals, and recent Activities</text>
+  <text x="152" y="570" font-family="Inter, Arial, sans-serif" font-size="28" fill="#2E2D29">Chapter context and show-up status</text>
   <rect x="720" y="392" width="650" height="272" rx="20" fill="#F3EFE3" stroke="#DED6C4" stroke-width="2"/>
   <text x="760" y="454" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#315B49">Agent summary</text>
-  <text x="760" y="510" font-family="Inter, Arial, sans-serif" font-size="26" fill="#2E2D29">Your Kwilt context points to a week</text>
-  <text x="760" y="552" font-family="Inter, Arial, sans-serif" font-size="26" fill="#2E2D29">about turning scattered ambition into</text>
-  <text x="760" y="594" font-family="Inter, Arial, sans-serif" font-size="26" fill="#2E2D29">a small repeatable rhythm.</text>
+  <text x="760" y="510" font-family="Inter, Arial, sans-serif" font-size="26" fill="#2E2D29">Kwilt is connected to the demo</text>
+  <text x="760" y="552" font-family="Inter, Arial, sans-serif" font-size="26" fill="#2E2D29">account, with planning context and</text>
+  <text x="760" y="594" font-family="Inter, Arial, sans-serif" font-size="26" fill="#2E2D29">durable control-plane tools available.</text>
   <rect x="152" y="732" width="1296" height="92" rx="20" fill="#315B49"/>
-  <text x="196" y="790" font-family="Inter, Arial, sans-serif" font-size="28" fill="#F8F6EF">Sprint A access is read-only: no create, edit, delete, or hidden note access.</text>
+  <text x="196" y="790" font-family="Inter, Arial, sans-serif" font-size="28" fill="#F8F6EF">Write access changes only user-owned Kwilt planning records.</text>
 </svg>
