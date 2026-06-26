@@ -113,7 +113,9 @@ Observed on 2026-06-26 from Codex against the hosted endpoint with an authentica
 - `initialize` returned server `Kwilt` version `0.1.0`.
 - `tools/list` returned 26 tools.
 - First read tools returned by the hosted server: `get_current_account`, `list_arcs`, `get_arc`, `list_goals`, `get_goal`, `list_recent_activities`, `get_current_chapter`, `get_show_up_status`.
+- Step-level To-do write tools were present: `create_activity_step`, `update_activity_step`, `mark_activity_step_done`, `delete_activity_step`, `reorder_activity_steps`.
 - Every listed tool included explicit `readOnlyHint`, `openWorldHint`, and `destructiveHint` annotations.
+- The live hosted tool list matched `chatgpt-app-submission.json`: 26 tools, no missing tools, no extra tools, no hint mismatches.
 - No listed tool declared an `outputSchema`; add output schemas in a future MCP hardening pass so models can use structured results more reliably.
 
 ## Sprint B Write Smoke

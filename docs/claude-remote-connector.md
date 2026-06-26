@@ -52,7 +52,7 @@ Then run:
 /mcp
 ```
 
-Confirm the Kwilt server is connected, authenticated, and exposing the expected context tools plus Goal and Activity write tools when write scope is granted.
+Confirm the Kwilt server is connected, authenticated, and exposing the expected context tools plus Arc, Goal, To-do, To-do step, check-in, focus, and Chapter-note write tools when write scope is granted.
 
 ## Directory Submission
 

@@ -10,7 +10,7 @@ This repository intentionally contains all Kwilt agent plugin artifacts in one p
 - Plugin manifests for Claude Code, Cursor, and Codex
 - A Kwilt context skill that teaches agents how to use account, Arc, Goal, Activity, Chapter, and show-up context
 - A Kwilt control-plane skill that teaches agents to capture durable build Goals and To-dos during coding work
-- Sprint B access to read Kwilt context and, with OAuth write consent, create or update Goals and Activities
+- Sprint B access to read Kwilt context and, with OAuth write consent, create, update, or recoverably delete user-owned planning records
 - A submission packet for ChatGPT/OpenAI, Codex, Claude, and Cursor review
 - PNG marketplace assets for review surfaces that do not accept SVG-only assets
 
@@ -119,14 +119,14 @@ Sprint B can read limited Kwilt summaries for:
 - Current or latest Chapter context
 - Show-up or streak status
 
-When the user grants OAuth write scope, the MCP server can also create or update user-owned Goals and Activities. Agents should use that write path only for durable planning records, not for every tiny implementation checklist item.
+When the user grants OAuth write scope, the MCP server can create, update, or recoverably delete user-owned Arcs, Goals, To-dos, To-do steps, Goal check-ins, focus state, and Chapter user notes. Agents should use that write path only for durable planning records, not for every tiny implementation checklist item.
 
 Expected write behavior:
 
 - Reuse an existing Goal when one clearly fits.
 - Create a new Goal only for a new durable workstream.
-- Capture deliverable steps and deferred follow-ups as Activities.
-- Mark Activities done only after the implementation and verification have passed.
+- Capture deliverable steps and deferred follow-ups as To-dos or To-do steps.
+- Mark To-dos or steps done only after the implementation and verification have passed.
 - Summarize all Kwilt writes at handoff.
 
 See `docs/privacy.md` and `docs/revocation.md` for publishing-ready privacy and access guidance.
