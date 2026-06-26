@@ -6,7 +6,7 @@ This repo packages the Kwilt remote MCP connector for agent clients. The core ar
 https://auth.kwilt.app/functions/v1/mcp
 ```
 
-Sprint B exposes summarized Kwilt context for account inspection, Arcs, Goals, recent Activities, Chapter context, and show-up status. With OAuth write scope, the connector can also create, update, or recoverably delete user-owned Arcs, Goals, Activities, Activity steps, Goal check-ins, focus state, and Chapter user notes so agents can preserve durable build to-dos and deferred follow-ups in Kwilt.
+Sprint B exposes summarized Kwilt context for account inspection, Arcs, Goals, recent To-dos, Chapter context, and show-up status. With OAuth write scope, the connector can also create, update, or recoverably delete user-owned Arcs, Goals, To-dos, To-do steps, Goal check-ins, focus state, and Chapter user notes so agents can preserve durable build to-dos and deferred follow-ups in Kwilt.
 
 ## Submission Tracks
 
@@ -147,7 +147,7 @@ Complete this checklist before sending any public submission:
 - [ ] Demo account contains stable seeded data.
 - [ ] All test prompts pass on the target client.
 - [ ] OpenAI demo recording URL shows the real Developer Mode connector flow with the demo account.
-- [ ] One controlled Goal and Activity write has been created and verified in Kwilt.
+- [ ] One controlled Goal, To-do, and To-do step write has been created and verified in Kwilt.
 - [ ] Tool metadata and annotations match actual behavior.
 - [ ] User-facing answers omit raw item IDs unless needed for connector debugging.
 - [ ] Privacy policy discloses every user-related field returned by tools.

@@ -72,12 +72,12 @@ In the Inspector:
 4. Run initialize.
 5. List tools.
 6. Call each context tool with the demo account.
-7. With write scope granted, create one controlled Goal and one controlled Activity, then verify the Activity appears under that Goal.
+7. With write scope granted, create one controlled Goal and one controlled To-do, add or update one controlled To-do step, then verify the To-do appears under that Goal.
 
 Expected result:
 
 - OAuth completes without MFA or internal network access.
-- The server lists context tools and the expected Goal/Activity write tools for the granted scope.
+- The server lists context tools and the expected planning write tools for the granted scope.
 - Tool calls return summarized Kwilt context.
 - Write tools create, update, or recoverably delete only user-owned Kwilt planning records.
 - Tool results do not include tokens, secrets, unrelated account data, or unexpected raw records.
@@ -105,7 +105,7 @@ Before final public submission, capture:
 - OAuth result.
 - Tool list.
 - One successful result for each reviewer test prompt.
-- One successful controlled Goal and Activity write result, including the visible Goal and Activity names.
+- One successful controlled Goal, To-do, and To-do step write result, including visible names.
 - Any known platform-specific callback URL.
 
 Observed on 2026-06-26 from Codex against the hosted endpoint with an authenticated Kwilt MCP token:
@@ -129,4 +129,4 @@ Observed on 2026-06-07 from Codex with the Kwilt MCP connector authenticated:
 - Marked the Activity done.
 - Marked the Goal completed.
 
-This confirms the connector can perform the controlled Goal and Activity write flow needed by `skills/kwilt-control-plane/SKILL.md`.
+This confirms the connector can perform the controlled Goal and To-do write flow needed by `skills/kwilt-control-plane/SKILL.md`.

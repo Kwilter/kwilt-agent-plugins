@@ -8,7 +8,7 @@ This repo targets Claude's remote MCP connector path for public Claude distribut
 - Connector URL: `https://auth.kwilt.app/functions/v1/mcp`
 - Transport: HTTP remote MCP
 - Authentication: OAuth
-- Access level: Sprint B context plus Goal and Activity writes when OAuth write scope is granted
+- Access level: Sprint B context plus Arc, Goal, To-do, To-do step, check-in, focus, and Chapter-note writes when OAuth write scope is granted
 - Public docs: `https://github.com/Kwilter/kwilt-agent-plugins`
 - Privacy policy: `https://kwilt.app/privacy`
 - Terms: `https://kwilt.app/terms`
@@ -24,7 +24,7 @@ Connect Claude to your Kwilt account, Arcs, Goals, recent Activities, Chapter co
 Long description:
 
 ```text
-Kwilt gives Claude access to summarized personal planning context from Kwilt. After OAuth consent, Claude can help users reflect on their Arcs, Goals, recent Activities, Chapter context, and show-up status. With write consent, Claude can also create or update durable Goals and Activities for build to-dos and deferred follow-ups.
+Kwilt gives Claude access to summarized personal planning context from Kwilt. After OAuth consent, Claude can help users reflect on their Arcs, Goals, recent Activities, Chapter context, and show-up status. With write consent, Claude can also create, update, or recoverably delete durable user-owned planning records such as Goals, To-dos, To-do steps, check-ins, focus state, and Chapter user notes.
 ```
 
 ## Anthropic Review Checklist
@@ -32,7 +32,7 @@ Kwilt gives Claude access to summarized personal planning context from Kwilt. Af
 - Confirm the MCP server is reachable from Anthropic's cloud infrastructure.
 - Confirm OAuth works without manual setup, MFA, SMS, email OTP, VPN, or internal network access.
 - Confirm the connector does not expose unrelated account data.
-- Confirm write actions are limited to user-owned Goals and Activities and require appropriate OAuth consent.
+- Confirm write actions are limited to user-owned Kwilt planning records and require appropriate OAuth consent.
 - Confirm destructive actions are absent from the public connector unless separately reviewed and documented.
 - Confirm privacy and revocation documentation is public and accurate.
 - Confirm demo account data is stable and non-sensitive.

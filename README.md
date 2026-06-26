@@ -115,7 +115,7 @@ Sprint B can read limited Kwilt summaries for:
 - Authenticated account identity
 - Arcs
 - Goals
-- Recent Activities
+- Recent To-dos
 - Current or latest Chapter context
 - Show-up or streak status
 

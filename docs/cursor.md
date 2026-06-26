@@ -33,7 +33,7 @@ The Kwilt MCP server allows that callback and completes OAuth through the hosted
 
 ## Control-Plane Behavior
 
-The `kwilt-control-plane` skill teaches Cursor Agent to use Kwilt as durable storage for build Goals and To-dos. It should reuse matching Goals, create a new Goal only for a new durable workstream, capture deliverable steps as Activities, and mark Activities done only after verification.
+The `kwilt-control-plane` skill teaches Cursor Agent to use Kwilt as durable storage for build Goals and To-dos. It should reuse matching Goals, create a new Goal only for a new durable workstream, capture deliverable steps as To-dos or To-do steps, and mark To-dos done only after verification.
 
 ## Marketplace Checklist
 

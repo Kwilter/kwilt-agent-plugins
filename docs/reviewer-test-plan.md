@@ -14,7 +14,7 @@ The demo account should include:
 - One current or latest Chapter summary.
 - One show-up or streak summary.
 
-The connector can read summarized Kwilt context. With OAuth write scope, it can also create or update user-owned Goals and Activities for durable planning capture. No test should publish, send, expose secrets, mutate unrelated data, or perform destructive actions.
+The connector can read summarized Kwilt context. With OAuth write scope, it can also create, update, or recoverably delete user-owned Arcs, Goals, To-dos, To-do steps, Goal check-ins, focus state, and Chapter user notes. Reviewer tests should use only controlled, non-destructive writes unless a destructive flow is explicitly being reviewed with resettable demo data. No test should publish, send, expose secrets, mutate unrelated data, or perform destructive actions outside the demo account.
 
 ## Test Cases
 
@@ -132,7 +132,7 @@ Expected behavior:
 
 - The agent lists or checks existing Goals before writing.
 - The agent reuses a matching Goal when possible or creates a new one only if needed.
-- The agent captures durable deliverable steps as Activities.
+- The agent captures durable deliverable steps as To-dos or To-do steps.
 - The agent leaves the long-term revisit item planned rather than marking it done.
 - The agent summarizes all writes by name.
 
@@ -168,7 +168,7 @@ Before submission, rerun every test and confirm:
 
 - No tool response includes OAuth tokens, API keys, session IDs, trace IDs, or unrelated user data.
 - Write-capability claims match the actual granted OAuth scope.
-- Write tests affect only the demo account's Goals and Activities.
+- Write tests affect only the demo account's user-owned Kwilt records.
 - No answer implies access to hidden notes, private journal text, or full database records unless the MCP tool explicitly returns that content.
 - All OAuth flows complete without MFA, email OTP, SMS verification, VPN requirements, or internal network access.
 - The same prompts work in clean browser/app sessions, not only on a developer machine.

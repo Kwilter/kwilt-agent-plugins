@@ -9,11 +9,11 @@ Sprint B access can read summarized Kwilt context:
 - Authenticated account identity
 - Arcs
 - Goals
-- Recent Activities
+- Recent To-dos
 - Current or latest Chapter context
 - Show-up or streak status
 
-When the user grants OAuth write scope, the agent can also create, update, or recoverably delete user-owned Arcs, Goals, Activities, Activity steps, Goal check-ins, focus state, and Chapter user notes. The intended write use is durable planning capture: build to-dos, deferred follow-ups, and implementation outcomes that should persist in Kwilt.
+When the user grants OAuth write scope, the agent can also create, update, or recoverably delete user-owned Arcs, Goals, To-dos, To-do steps, Goal check-ins, focus state, and Chapter user notes. The intended write use is durable planning capture: build to-dos, deferred follow-ups, and implementation outcomes that should persist in Kwilt.
 
 The plugin should not expose raw database records, hidden notes, credentials, or unrelated account data.
 
@@ -27,4 +27,4 @@ Kwilt server-side systems may keep audit records for MCP tool usage, such as the
 
 Agents should summarize Kwilt context in user-facing language and avoid implying access to private fields that the MCP server did not return.
 
-Agents should summarize write actions before handoff, including the Goal or Activity names they created or updated. They should avoid writing every tiny implementation step and should mark Activities done only after verification.
+Agents should summarize write actions before handoff, including the Goal, To-do, or step names they created or updated. They should avoid writing every tiny implementation step and should mark To-dos or steps done only after verification.

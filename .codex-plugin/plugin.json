@@ -24,7 +24,7 @@
   "interface": {
     "displayName": "Kwilt",
     "shortDescription": "Use Kwilt context and to-dos from Codex.",
-    "longDescription": "Connect Codex to Kwilt through MCP so the agent can inspect the authenticated account, read Arcs, Goals, recent Activities, Chapter context, and show-up status, then capture durable Goals and To-dos when you ask Codex to build, plan, or preserve follow-up work.",
+    "longDescription": "Connect Codex to Kwilt through MCP so the agent can inspect the authenticated account, read Arcs, Goals, recent To-dos, Chapter context, and show-up status, then capture durable Goals, To-dos, and To-do steps when you ask Codex to build, plan, or preserve follow-up work.",
     "developerName": "Kwilt",
     "category": "Productivity",
     "capabilities": [

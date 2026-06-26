@@ -4,7 +4,7 @@
   "app_info": {
     "display_name": "Kwilt",
     "subtitle": "Plan with Kwilt",
-    "description": "Kwilt connects ChatGPT and Codex to a user's private Kwilt planning context. It can summarize Arcs, Goals, recent Activities, Chapter context, and show-up status, and with write consent it can save durable Goals, To-dos, check-ins, and related planning updates back to Kwilt.",
+    "description": "Kwilt connects ChatGPT and Codex to a user's private Kwilt planning context. It can summarize Arcs, Goals, recent To-dos, Chapter context, and show-up status, and with write consent it can create, update, or recoverably delete user-owned planning records such as Goals, To-dos, To-do steps, check-ins, focus state, and Chapter notes.",
     "category": "PRODUCTIVITY"
   },
   "tools": {

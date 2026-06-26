@@ -3,7 +3,7 @@
     "kwilt": {
       "type": "http",
       "url": "https://auth.kwilt.app/functions/v1/mcp",
-      "note": "Kwilt MCP server. Uses OAuth and exposes Kwilt context such as account inspection, Arcs, Goals, recent Activities, Chapter context, and show-up status. When write scope is granted, agents may create or update durable Kwilt planning records."
+      "note": "Kwilt MCP server. Uses OAuth and exposes Kwilt context such as account inspection, Arcs, Goals, recent To-dos, Chapter context, and show-up status. When write scope is granted, agents may create, update, or recoverably delete user-owned Kwilt planning records."
     }
   }
 }

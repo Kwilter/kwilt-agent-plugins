@@ -27,7 +27,7 @@ docs/codex-marketplace-example.json
 
 ## Authentication
 
-Enable the `Kwilt` MCP server in Codex and complete the hosted OAuth consent flow. Sprint B access reads summarized Kwilt context and, when write scope is granted, lets Codex create or update Goals and Activities for durable build to-dos.
+Enable the `Kwilt` MCP server in Codex and complete the hosted OAuth consent flow. Sprint B access reads summarized Kwilt context and, when write scope is granted, lets Codex create, update, or recoverably delete user-owned Arcs, Goals, To-dos, To-do steps, Goal check-ins, focus state, and Chapter user notes for durable planning capture.
 
 ## Control-Plane Behavior
 

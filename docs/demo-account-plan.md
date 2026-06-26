@@ -26,7 +26,7 @@ Suggested fixture:
   - Goal: `Protect two early nights`
 - Arc: `Deep Work`
   - Goal: `Finish the agent plugin submission packet`
-- Recent Activities:
+- Recent To-dos:
   - `Drafted submission checklist`
   - `Reviewed current goals`
   - `Logged a run`
@@ -38,8 +38,9 @@ Suggested fixture:
   - A short streak or latest show-up summary with no private journal text.
 - Write-test workspace:
   - Goal: `Agent plugin verification`
-  - Activity: `Verify control-plane write capture`
-  - Activity: `Revisit Phone Agent strategy after removal`
+  - To-do: `Verify control-plane write capture`
+  - To-do: `Revisit Phone Agent strategy after removal`
+  - To-do step: `Confirm OpenAI submission packet matches live MCP tools`
 
 ## Reviewer Credential Handling
 
@@ -72,6 +73,6 @@ The reviewer should be able to:
 - Connect Kwilt through OAuth.
 - Run every prompt in `docs/reviewer-test-plan.md`.
 - See useful Kwilt summaries.
-- Create or update a controlled Goal and Activity when write scope is granted.
+- Create or update a controlled Goal, To-do, or To-do step when write scope is granted.
 - Revoke access.
 - Reconnect without contacting Kwilt support.
